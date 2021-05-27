@@ -1,5 +1,5 @@
 import socket
-from system import System
+from commands import System
 
 system = System("")
 
@@ -19,11 +19,13 @@ while True:
     # client address
     conn = sock.accept()[0]
 
+    # запрашиваем рабочую директорию
     print()
     message = "Enter your home directory"
     conn.send(message.encode())
     print(f"Sending data: {message}")
 
+    # получаем команду с клиента
     while True:
         try:
             message = ""

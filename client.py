@@ -49,7 +49,7 @@ while True:
     try:
         result = sock.send(text.encode())
         if not result:
-            raise Exception("Date not found")
+            raise Exception("Nthg to send")
     except Exception as e:
         print(f"ERROR: {e}")
         exit()

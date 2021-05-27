@@ -15,6 +15,7 @@ class System:
                 "mkdir": "Создание папки",
                 "delete": "Удаление папки или файла",
                 "rename": "Переименовать папку или файл",
+                "copy": "Копировать папку или файл",
                 "stop": "Выключение сервера"
         """
 
@@ -72,6 +73,7 @@ class System:
 
         else:
             return "None"
+
     def setPath(self, path):
         try:
             os.listdir(path)
